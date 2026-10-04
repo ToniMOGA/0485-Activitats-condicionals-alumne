@@ -11,55 +11,49 @@ public class PedraPaperTisora {
     Scanner teclat = new Scanner(System.in);
     
     
-    int numero = generador.nextInt(1,4);
-    System.out.println(numero);
-    int pedra = 1;
-    int paper = 2;
-    int tisora = 3;
-    
-    if (num.equals(1)) {
-    System.out.println("Pedra");
-    }
-    if (num.equals(2)) {
-    
-    }
-    
-    }
-    
+    int numero = generador.nextInt(3);
 
-//lo que debo hacer es que los usuarios por teclado pongan piedra papel o tijera, pero debo afiliar los numeros para que salga en el random
+    System.out.print("Entra pedra, paper o tisora: "); 
+    String jugador = teclat.next();
 
+    if (numero == 0) { 
+    System.out.println("Ordinador ha tret: pedra"); 
 
+    } else if (numero == 1) {
+        System.out.println("Ordinador ha tret: paper"); 
+    } else { 
+        System.out.println("Ordinador ha tret: tisora"); 
+    } 
+    
+    if (jugador.equals("pedra")) { 
+        
+        if (numero == 0) { 
+            System.out.println("Heu empatat!!"); 
+        } else if (numero == 1) { 
+            System.out.println("Has perdut!"); 
+        } else { System.out.println("Has guanyat!"); 
 
-
-    /* 
-    System.out.println(numero);
-
+        } 
     
-    String frase;
-    frase = "Hola avui plou";
-    System.out.println(frase);
-    frase = "No ha plogut molt";
-    System.out.println(frase);
-
-    //basics amb minuscula: int, double, boolean, char. Complexes amb mayuscula: String, Random. per comprobar en estes no funciona el ==, 
-    String nom = "PEPE";
-    //if(nom) == Ana{ //NOOO ERROOOOR!!, el == solament en coses simples com numeros, per comparar correctament:
-    if(nom.equals("Ana")){
-        System.out.println("SIII!!");
-    }else{
-        System.out.println("NOOOO");
-    }
+    } else if (jugador.equals("paper")) { 
+        
+        if (numero == 0) { 
+            System.out.println("Has guanyat!"); 
+        } else if (numero == 1) { 
+            System.out.println("Heu empatat!!"); 
+        } else { 
+            System.out.println("Has perdut!"); 
+        
+        } 
     
-    String paraula;
-    paraula = teclat.next(); //nextLine() guardaría frases con espacios, como está ahora solo lee la primera palabra de la frase
-    System.out.println(paraula);
- */
-   
-    
-    
-    
-    
-    
-    }
+    } else if (jugador.equals("tisora")) { 
+        if (numero == 0) { 
+            System.out.println("Has perdut!"); 
+        } else if (numero == 1) { 
+            System.out.println("Has guanyat!"); 
+        } else { 
+            System.out.println("Heu empatat!!"); 
+        } 
+    } 
+}
 }
