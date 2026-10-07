@@ -33,7 +33,6 @@ public class OperacionsExcepcions {
 
     }
 
-
     }catch (InputMismatchException e){
         System.out.println("Error al executar operació");
     } 

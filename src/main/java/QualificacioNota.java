@@ -24,6 +24,6 @@ public class QualificacioNota {
         System.out.println("Suficient"); 
     } else { 
         System.out.println("Insuficient"); 
-        }   
+    }   
     } 
 }
