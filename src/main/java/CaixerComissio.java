@@ -14,25 +14,27 @@ public class CaixerComissio {
         double saldo = teclat.nextDouble();
         
         System.out.print("Introdueix la quantitat a treure: ");
-        int quantitat = teclat.nextInt();
+        double quantitat = teclat.nextDouble();
         
         System.out.print("Fas servir caixer propi? (S/N)");
         char propi = teclat.next().charAt(0);
 
         double comissio = 0;
         
-        if (propi == 'N') {
+        if (propi == 'N' || propi == 'n') {
             comissio = quantitat * 0.05;
         }
         
         double quantitatRetirar = quantitat + comissio;
 
         if(quantitatRetirar > saldo) {
-            System.out.println("No es pot fer");
+            System.out.println("No es pot fer la retirada. Saldo insuficient.");
         } else{
             double saldoRestant = saldo - quantitatRetirar;
-            System.out.println("Quantitat a treure: " + quantitat + " euros"); 
-            System.out.println("Comissió: " + comissio + " euros"); 
+            System.out.println("Quantitat a treure: " + quantitat + " euros");
+            if (comissio > 0) {                    
+                System.out.println("Comissió: " + comissio + " euros");
+            }
             System.out.println("Saldo restant: " + saldoRestant + " euros");
 
         }

@@ -20,13 +20,14 @@ public class VaquesPorcs {
     double percentPorcs = (double) porcs / total * 100;
 
     System.out.println("El percentatge és: " + (int) percentVaques + "% de vaques");
+    System.out.println("El percentatge és: " + (int) percentPorcs + "% de porcs");
 
-    if (vaques > porcs){
-        System.out.println("Hi ha més vaques que porcs!");
-    } else if (porcs > vaques){
-        System.out.println("Hi ha més porcs que vaques!");
-    } else {
-        System.out.println("Hi ha el mateix nombre de vaques que de porcs!");
-    }
+        if (vaques > porcs){
+            System.out.println("Hi ha més vaques que porcs!");
+        } else if (porcs > vaques){
+            System.out.println("Hi ha més porcs que vaques!");
+        } else {
+            System.out.println("Hi ha el mateix nombre de vaques que de porcs!");
+        }
     }
 }

@@ -1,4 +1,3 @@
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -9,32 +8,32 @@ public class OperacionsExcepcions {
         //   Controla amb try/catch que l'usuari introdueixi números vàlids
         //   Controla que el segon operand no sigui 0 abans de dividir
     
-    try
-    {
-    
-    Scanner teclat = new Scanner(System.in);
-    System.out.println("Entra primer numero: ");
-    int num1 = teclat.nextInt();
-    System.out.println("Entra segon numero: ");
-    int num2 = teclat.nextInt();
+        try {
+            
+            Scanner teclat = new Scanner(System.in);
+            System.out.println("Entra primer numero: ");
+            int num1 = teclat.nextInt();
+            System.out.println("Entra segon numero: ");
+            int num2 = teclat.nextInt();
 
-    int resultat;
-    resultat = num1 + num2;
-    System.out.println(num1 + " + " + num2 + " = " + resultat);
-    resultat = num1 - num2;
-    System.out.println(num1 + " - " + num2 + " = " + resultat);
-    resultat = num1 * num2;
-    System.out.println(num1 + " * " + num2 + " = " + resultat);
+            int resultat;
+            resultat = num1 + num2;
+            System.out.println(num1 + " + " + num2 + " = " + resultat);
+            resultat = num1 - num2;
+            System.out.println(num1 + " - " + num2 + " = " + resultat);
+            resultat = num1 * num2;
+            System.out.println(num1 + " * " + num2 + " = " + resultat);
 
 
-    if(num2!=0){
+            if(num2!=0){
             resultat = num1 / num2;
             System.out.println(num1 + " / " + num2 + " = " + resultat);
+            } else {                                                    // CANVI: avisa si no es pot dividir
+                System.out.println("No es pot dividir entre 0");
+            }
 
-    }
-
-    }catch (InputMismatchException e){
-        System.out.println("Error al executar operació");
-    } 
+            }catch (InputMismatchException e){
+                System.out.println("Error al executar operació");
+        } 
     }
 }

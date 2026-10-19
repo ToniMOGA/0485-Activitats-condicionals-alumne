@@ -19,9 +19,13 @@ public class PreuEntradaCinema {
     System.out.println("Tens Carnet Jove? (S/N):");
     char carnet = teclat.next().charAt(0);
 
-    if (dia == 'C') {
-        preu = preu + (preu * 0.10);
-    }
+     if (dia == 'C' || dia == 'c') {
+            preu = preu + (preu * 0.10);
+        }
+
+        if (carnet == 'S' || carnet == 's') {        
+            preu = preu - (preu * 0.15);
+        }
 
     System.out.println("El preu de l'entrada és: " + preu + " euros");
     }
